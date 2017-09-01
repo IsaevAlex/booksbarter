@@ -1,0 +1,25 @@
+<%= render 'layouts/header' %>
+<div class="main-section">
+	<div class="col-md-12">
+        <h1 class="text-center">tonleve</h1>
+        <h3 class="text-center">Торговая площадка для всех</h3><br><br>
+        <div class="text-center">
+        	<%= link_to "Зарегистрироваться", new_user_registration_path, class:"btn-success btn-large" %>
+        </div>
+    	
+    </div>	
+</div><br><br>
+<div class="row">
+	<div class="container">
+		<div class="col-md-12 text-center">
+            <%= form_tag '#', method: :get do %>
+        		<%= text_field_tag :search, params[:search], class:"main-search", placeholder:"Поиск товаров и услуг" %>
+        		<a href="" class="btn-search">
+	                	<i class="fa fa-search fa-2x" aria-hidden="true"></i>
+	                </a>
+        	<% end %><br>		
+		</div>
+		
+		
+	</div>
+</div>
