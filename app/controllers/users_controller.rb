@@ -15,8 +15,4 @@ class UsersController < ApplicationController
 	      accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
 	      params.require(:user).permit(accessible).except(:search)
 	    end
-
-	    def edit_user_params
-	      params.require(:user).permit(phones_attributes: [:id, :name, :_destroy], locations_attributes: [:id, :name, :_destroy])
-	    end
 end
